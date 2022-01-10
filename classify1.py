@@ -52,11 +52,6 @@ print(trainX.shape, trainy.shape)
 testX, testy = load_dataset(folder + '5-celebrity-faces-dataset/val/')
 savez_compressed(folder + '5-celebrity-faces-dataset.npz', trainX, trainy, testX, testy)
 
-from numpy import load
-from numpy import expand_dims
-from numpy import asarray
-from numpy import savez_compressed
-from keras.models import load_model
 
 def get_embedding(model, face_pixels):
 	face_pixels = face_pixels.astype('float32')
@@ -86,11 +81,6 @@ newTestX = asarray(newTestX)
 print(newTestX.shape)
 savez_compressed(folder+'5-celebrity-faces-embeddings.npz', newTrainX, trainy, newTestX, testy)
 
-from numpy import load
-from sklearn.metrics import accuracy_score
-from sklearn.preprocessing import LabelEncoder
-from sklearn.preprocessing import Normalizer
-from sklearn.svm import SVC
 
 folder = "/content/drive/MyDrive/colabdata/"
 
